@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import { javascript } from '@codemirror/lang-javascript';
 import { cpp } from '@codemirror/lang-cpp';
 import { php } from '@codemirror/lang-php';
+import { apiUrl } from '../config';
 
 const CodeMirror = dynamic(() => {
   return import('@uiw/react-codemirror').then(mod => mod.default)
@@ -30,7 +31,7 @@ export default function Home() {
   };
 
   const fetchAnalysis = async (endpoint, setState) => {
-    const response = await fetch(`/api/${endpoint}`, {
+    const response = await fetch(`${apiUrl}/api/${endpoint}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code, language })

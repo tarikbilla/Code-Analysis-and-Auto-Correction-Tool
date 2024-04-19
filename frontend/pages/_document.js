@@ -7,7 +7,7 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="UTF-8" />
-          <title>Static Code Analysis Tool</title>
+          <title>PHP Code Review and Pattern Correction Using AI</title>
         </Head>
         <body className=" bg-blue-50 dark:bg-gray-900">
             <Main />

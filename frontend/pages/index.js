@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { javascript } from '@codemirror/lang-javascript';
-import { cpp } from '@codemirror/lang-cpp';
 import { php } from '@codemirror/lang-php';
 import { apiUrl } from '../config';
 
@@ -11,7 +9,7 @@ const CodeMirror = dynamic(() => {
 
 export default function Home() {
   const [code, setCode] = useState('');
-  const [language, setLanguage] = useState('javascript');
+  const [language, setLanguage] = useState('php');
   const [analysisResult, setAnalysisResult] = useState('');
   const [errorResult, setErrorResult] = useState('');
   const [debugResult, setDebugResult] = useState('');
@@ -19,10 +17,6 @@ export default function Home() {
 
   const getLanguageMode = () => {
     switch (language) {
-      case 'javascript':
-        return javascript();
-      case 'cpp':
-        return cpp();
       case 'php':
         return php();
       default:
@@ -69,15 +63,14 @@ export default function Home() {
     <div className="relative container mx-auto px-4">
       {/* input data */}
       <div>
-        <h1 className="text-2xl font-bold text-center mb-4 mt-4">Static Code Analysis Tool</h1>
+        <h1 className="text-2xl font-bold text-center mb-4 mt-4">PHP Code Review and Pattern Correction Using AI</h1>
         <select
           value={language}
           onChange={(e) => setLanguage(e.target.value)}
           className="mb-2 p-2 border border-gray-300 rounded"
+          hidden
         >
-          <option value="javascript">JavaScript</option>
-          <option value="cpp">C++</option>
-          <option value="php">PHP</option>
+          <option value="php" selected>PHP</option>
         </select>
         <CodeMirror
           value={code}
@@ -108,7 +101,7 @@ export default function Home() {
 
         {analysisResult &&
           <div className={`pointer-events-auto w-full rounded-lg bg-white p-4 mt-8 mb-8 text-md leading-5 shadow-xl shadow-black/5 hover:bg-slate-50 ring-1 ring-slate-700/10`}>
-            <h2 className="text-xl font-semibold mb-4">Detailed Code Analysis</h2>
+            <h2 className="text-xl font-semibold mb-4">Detailed Code Review</h2>
             <div className="p-4 bg-gray-100 rounded" dangerouslySetInnerHTML={{ __html: formatText(analysisResult) }}></div>
           </div>
         }

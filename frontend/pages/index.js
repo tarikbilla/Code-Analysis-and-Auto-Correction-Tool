@@ -70,7 +70,7 @@ export default function Home() {
           className="mb-2 p-2 border border-gray-300 rounded"
           hidden
         >
-          <option value="php" selected>PHP</option>
+          <option value="php">PHP</option>
         </select>
         <CodeMirror
           value={code}

@@ -1,4 +1,4 @@
-# PHP Code Review and Pattern Correction Using AI
+# PHP Code Review and Pattern Correction Using AI 
 
 ## Introduction
 This project aims to simplify the web application development process with a focus on PHP, automating code analysis and suggesting corrections aligned with software development pattern standards. It addresses the challenges developers face during manual code debugging and the inefficiencies of current tools, leveraging AI technology to provide instant and accurate code enhancement recommendations.
@@ -24,7 +24,7 @@ The application will feature a simple front-end for code submission and a sophis
 Participants will gain skills and understanding in:
 - **AI in Software Development:** Streamlining code analysis and correction within the PHP ecosystem.
 - **Web Application Development:** Enhancing abilities in both front-end and back-end development.
-- **Code Analysis Techniques:** Identifying errors and offering corrections underpinned by software development patterns and standards.
+- **Code Analysis Techniques:** Identify errors and offer corrections underpinned by software development patterns and standards.
 - **Practical AI Integration:** Integrating AI technologies into development tools.
 - **Project Management:** Managing a development project from conception to deployment.
 
